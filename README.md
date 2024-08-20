@@ -9,6 +9,31 @@
 
 ##  更新日志
 
+####  2024-08-20
+
+发布v1.1.0
+
+> 启动时需添加 **-Doracle.jdbc.javaNetNio=false** JVM选项  
+
+**修复**
+
+>修复mysql no select databse问题  
+>修复postgresql命令执行UTF-8字符问题 #5  
+>修复数据库链接遗留问题  
+
+**优化**
+
+>添加socks5代理支持  
+>添加redis windows系统支持  
+>添加postgresql文件管理功能  
+>调整redis利用界面布局   
+
+**SHA1**
+
+> MDUT-Extend-1.1.0.zip  993062938583FEEA8A8E6FA9272A1DEB1CC08095  
+> redis-module-extend-windows.zip 1477798592D5F7711E2D04FFCC10BD8F13336E23  
+> redis-module-extend-linux.zip  750B6EBA467B636C7A1A2C80B80AD32414D1BC40  
+
 ####  2024-08-11
 
 发布v1.0.0
