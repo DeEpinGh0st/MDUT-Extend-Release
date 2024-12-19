@@ -9,6 +9,42 @@
 
 ##  更新日志
 
+####  2024-12-19
+
+发布v1.2.0
+
+**修复**
+
+> 修复redis命令执行回显格式错乱和中文乱码问题
+>
+> 修复mssql下载文件只有10kb问题
+>
+> 修复postgresql命令执行问题,由direct改为base64
+>
+> 修复postgresql读取中文目录和文件报错问题
+>
+> 修复postgresql文件删除失败问题
+
+**优化**
+
+> 优化postgresql文件管理显示以及兼容linux
+>
+> 添加postgresql文件管理支持pg func和cve两种方式
+>
+> 添加redis主从同步前对数据进行磁盘同步
+>
+> 添加postgresql中cve方式读取文件
+>
+> 添加Mssql提权对Godpotato支持
+>
+> 其他代码优化
+
+**SHA1**
+
+> MDUT-Extend-1.2.0.zip  ADEA3261855D4C7F0D9002E4A8416EBE0D6E4397  
+> redis-module-extend-windows.zip 3CF830E474D5E2C22DB2198DD5A52AC36DBBAD30  
+> redis-module-extend-linux.zip  750B6EBA467B636C7A1A2C80B80AD32414D1BC40  
+
 ####  2024-08-20
 
 发布v1.1.0
