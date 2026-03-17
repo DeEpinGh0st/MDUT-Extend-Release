@@ -9,95 +9,32 @@
 
 ##  更新日志
 
-####  2024-12-19
+####  2025-03-17
 
-发布v1.2.0
+发布v1.3.0
 
-**修复**
+🌟 New Features
+- 新增MongoDB类型数据库利用
+- 新增数据库存活扫描功能(Resolves #7)
+- 新增Redis CVE-2025-49844和CVE-2022-0543利用
+- 新增Oracle大文件模式上传和下载
+- 新增Mssql的Godpotato等提权类型
+- 新增Mssql加载shellcode功能
+- 新增Mssql综合利用
 
-> 修复redis命令执行回显格式错乱和中文乱码问题
->
-> 修复mssql下载文件只有10kb问题
->
-> 修复postgresql命令执行问题,由direct改为base64
->
-> 修复postgresql读取中文目录和文件报错问题
->
-> 修复postgresql文件删除失败问题
+🐛 Bug Fixes
+- 修复Oracle的ORA-12505问题，现已支持SID和service连接方式(Fixes #9)
+- 修复某些情况下Oracle函数初始化失败问题
+- 修复某些情况下Oracle执行powershell右括号缺失问题(Fixes #10)
+- 修复Oracle下载文件时ORA-24345问题(Fixes #10)
+- 修复Redis下linux计划任务名称随机化问题(Fixes #16)
+- 修复某些情况下Postgresql驱动程序异常问题(Fixes #18)
+- 修复某些场景下Redis主从复制失败问题(Fixes #19)
+- 修复某些场景下Redis SocketException问题(Fixes #20)
 
-**优化**
 
-> 优化postgresql文件管理显示以及兼容linux
->
-> 添加postgresql文件管理支持pg func和cve两种方式
->
-> 添加redis主从同步前对数据进行磁盘同步
->
-> 添加postgresql中cve方式读取文件
->
-> 添加Mssql提权对Godpotato支持
->
-> 其他代码优化
-
-**SHA1**
-
-> MDUT-Extend-1.2.0.zip  ADEA3261855D4C7F0D9002E4A8416EBE0D6E4397  
-> redis-module-extend-windows.zip 3CF830E474D5E2C22DB2198DD5A52AC36DBBAD30  
-> redis-module-extend-linux.zip  750B6EBA467B636C7A1A2C80B80AD32414D1BC40  
-
-####  2024-08-20
-
-发布v1.1.0
-
-> 启动时需添加 **-Doracle.jdbc.javaNetNio=false** JVM选项  
-
-**修复**
-
->修复mysql no select databse问题  
->修复postgresql命令执行UTF-8字符问题 #5  
->修复数据库链接遗留问题  
-
-**优化**
-
->添加socks5代理支持  
->添加redis windows系统支持  
->添加postgresql文件管理功能  
->调整redis利用界面布局   
-
-**SHA1**
-
-> MDUT-Extend-1.1.0.zip  993062938583FEEA8A8E6FA9272A1DEB1CC08095  
-> redis-module-extend-windows.zip 1477798592D5F7711E2D04FFCC10BD8F13336E23  
-> redis-module-extend-linux.zip  750B6EBA467B636C7A1A2C80B80AD32414D1BC40  
-
-####  2024-08-11
-
-发布v1.0.0
-
-**修复**
-
->修复mysql5.0版本udf错误问题  
->修复linux下redis ping命令卡死问题  
->修复mssql的CLR激活问题  
->修复redis反弹shell后主进程结束问题  
->修复oracle连接时ORA-28009问题  
->修复oracle命令执行前缀问题  
->修复oracle ShellUtil编译错误问题  
-
-**优化**
-
->添加分组管理功能  
->添加mysql驱动高低版本切换选项  
->添加oracle命令执行无前缀选项  
->添加oracle命令执行noline模式  
->优化redis无损写SSH key  
->添加redis无损文件读写功能  
->去除原版启动提示  
->去除原版更新菜单  
->优化文字显示和交互体验  
-
-**SHA1**
-
-> MDUT-Extend-1.0.0.zip 209EB58C3463DB32477EE6F88D92EC0E1A88BA0F  
-> redis-module-extend.zip 750B6EBA467B636C7A1A2C80B80AD32414D1BC40  
-
+🔨 Maintenance
+- 升级Jedis依赖库至最4.2.3
+- 移除不再支持的HttpDao文件和逻辑代码(Closes #2)
+- 优化分组UI和交互逻辑
+- 移除代理功能设置
