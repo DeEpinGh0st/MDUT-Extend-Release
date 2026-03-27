@@ -9,7 +9,21 @@
 
 ##  更新日志
 
-####  2025-03-17
+####  2026-03-27
+
+发布v1.3.1
+
+🛡**Security**
+
+- 解决MongoDB利用脚本源文件供应链投毒问题(Fixed [#22](https://github.com/DeEpinGh0st/MDUT-Extend-Release/issues/22))
+
+🐛 Bug Fixes
+
+- 修复MongoDB存活探测异常问题(Fixed [#21](https://github.com/DeEpinGh0st/MDUT-Extend-Release/issues/21))
+
+
+
+####  2026-03-17
 
 发布v1.3.0
 
