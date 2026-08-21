@@ -1,0 +1,16 @@
+**/.DS_Store
+
+# Claude
+.claude/
+
+# IDE
+.idea/
+*.iml
+.vscode/
+*.code-workspace
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
